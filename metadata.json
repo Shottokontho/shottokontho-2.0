@@ -1,0 +1,7 @@
+{
+  "name": "ShottoKontho - Bangla News Empire",
+  "description": "A high-performance, authoritative Bangla news portal inspired by BBC and CNN, featuring AI-powered personalization and a sleek modern UI.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

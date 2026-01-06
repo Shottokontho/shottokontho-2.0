@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="bn">
   <head>
@@ -10,6 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+      // Shim for process.env to prevent ReferenceErrors in production ESM environments
+      window.process = {
+        env: {
+          API_KEY: "" 
+        }
+      };
+      
       tailwind.config = {
         darkMode: 'class',
         theme: {
@@ -42,7 +48,6 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
       }
-      /* Custom scrollbar for news ticker */
       .no-scrollbar::-webkit-scrollbar {
         display: none;
       }
@@ -51,22 +56,24 @@
         scrollbar-width: none;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0"
-  }
-}
-</script>
-</head>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@19.2.0",
+        "react/": "https://esm.sh/react@19.2.0/",
+        "react-dom": "https://esm.sh/react-dom@19.2.0",
+        "react-dom/": "https://esm.sh/react-dom@19.2.0/",
+        "react-dom/client": "https://esm.sh/react-dom@19.2.0/client",
+        "react-router-dom": "https://esm.sh/react-router-dom@7.1.1?deps=react@19.2.0,react-dom@19.2.0",
+        "lucide-react": "https://esm.sh/lucide-react@0.469.0?deps=react@19.2.0",
+        "@google/genai": "https://esm.sh/@google/genai@1.34.0"
+      }
+    }
+    </script>
+  </head>
   <body class="bg-white text-gray-900 dark:bg-dark dark:text-gray-100 transition-colors">
     <div id="root"></div>
-    <!-- Load the application module -->
+    <!-- The application module -->
     <script type="module" src="index.tsx"></script>
   </body>
 </html>

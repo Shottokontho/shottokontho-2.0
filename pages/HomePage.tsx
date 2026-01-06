@@ -1,9 +1,8 @@
-
 import React from 'react';
-import { Language, Category } from '../types.ts';
-import { MOCK_ARTICLES, CATEGORIES_LIST } from '../constants.tsx';
-import NewsCard from '../components/NewsCard.tsx';
-import NewsTicker from '../components/NewsTicker.tsx';
+import { Language, Category } from '../types';
+import { MOCK_ARTICLES, CATEGORIES_LIST } from '../constants';
+import NewsCard from '../components/NewsCard';
+import NewsTicker from '../components/NewsTicker';
 import { ArrowRight, Zap, TrendingUp, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

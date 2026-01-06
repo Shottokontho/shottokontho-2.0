@@ -1,17 +1,16 @@
-
 import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
-import { Language } from './types.ts';
-import Header from './components/Header.tsx';
-import Footer from './components/Footer.tsx';
-import HomePage from './pages/HomePage.tsx';
-import ArticlePage from './pages/ArticlePage.tsx';
-import CategoryPage from './pages/CategoryPage.tsx';
-import LoginPage from './pages/LoginPage.tsx';
-import ProfilePage from './pages/ProfilePage.tsx';
-import AIPopup from './components/AIPopup.tsx';
-import DonationModal from './components/DonationModal.tsx';
-import PartnerModal from './components/PartnerModal.tsx';
+import { Language } from './types';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import ArticlePage from './pages/ArticlePage';
+import CategoryPage from './pages/CategoryPage';
+import LoginPage from './pages/LoginPage';
+import ProfilePage from './pages/ProfilePage';
+import AIPopup from './components/AIPopup';
+import DonationModal from './components/DonationModal';
+import PartnerModal from './components/PartnerModal';
 
 const PartnerPage = ({ lang }: { lang: Language }) => (
   <div className="container mx-auto px-4 py-20 text-center max-w-4xl animate-in fade-in duration-700">

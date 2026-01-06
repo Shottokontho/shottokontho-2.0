@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { Language, Category } from '../types';
-import { MOCK_ARTICLES, CATEGORIES_LIST } from '../constants';
-import NewsCard from '../components/NewsCard';
-import NewsTicker from '../components/NewsTicker';
+import { Language, Category } from '../types.ts';
+import { MOCK_ARTICLES, CATEGORIES_LIST } from '../constants.tsx';
+import NewsCard from '../components/NewsCard.tsx';
+import NewsTicker from '../components/NewsTicker.tsx';
 import { ArrowRight, Zap, TrendingUp, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -13,7 +13,6 @@ interface HomePageProps {
 
 const HomePage: React.FC<HomePageProps> = ({ lang }) => {
   const mainArticle = MOCK_ARTICLES[0];
-  const trendingArticles = MOCK_ARTICLES.slice(1, 6);
   const breakingItems = MOCK_ARTICLES.filter(a => a.isBreaking).map(a => a.title[lang]);
 
   return (
